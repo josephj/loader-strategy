@@ -1,0 +1,53 @@
+html, body {
+    background: #eaeaea;
+}
+
+body {
+    padding: 10px 0 0;
+    margin: 0 auto;
+    width: 960px;
+}
+
+h2 {
+    font-size: 20px;
+    border-bottom: solid 1px #ccc;
+    padding: 5px;
+}
+
+.content {
+    margin: 0 10px 10px 0;
+}
+
+.mod {
+    font-size: 16px;
+    background: #999;
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    color: #fff;
+}
+.mod h2, .mod h3, .mod ul, .mod p {
+    margin: 0 0 7px;
+}
+.mod ul ul {
+    margin-left: 7px;
+}
+.mod ul ul li {
+    list-style: disc;
+    margin-left: 15px;
+}
+
+.mod .bd {
+    line-height: 1.5;
+}
+
+#header, #footer {
+    min-height: 70px;
+}
+
+#sidebar, #notification {
+    min-height: 300px;
+}
