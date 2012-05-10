@@ -6,14 +6,11 @@
 <link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssreset/reset-min.css">
 <link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssfonts/fonts-min.css">
 <link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssgrids/grids-min.css">
-<link rel="stylesheet" href="demo.css">
-<script src="http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js"></script>
-<script src="config.js"></script>
-<script>
-YUI().use("#notification", function (Y) {
-    alert(Y.Editable);
-});
-</script>
+<?php
+require_once("config.php");
+$html = loadModule(array("welcome/_notification", "common/_sidebar", "charming/_masthead"));
+echo $html;
+?>
 </head>
 <body>
 

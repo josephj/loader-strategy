@@ -1,12 +1,15 @@
 [submodule "minify"]
-	path = minify
-	url = git://github.com/mrclay/minify.git
+        path = minify
+        url = git://github.com/mrclay/minify.git
+[submodule "static/lib/mui/scroll-pagination"]
+        path = static/lib/mui/scroll-pagination
+        url = git://github.com/miiicasa/scroll-pagination.git
+[submodule "static/lib/mui/editable"]
+        path = static/lib/mui/editable
+        url = git://github.com/miiicasa/yui3-editable.git
+[submodule "static/lib/mui/platform"]
+        path = static/lib/mui/platform
+        url = git://github.com/miiicasa/javascript-platform-yui.git
 [submodule "static/lib/yui"]
 	path = static/lib/yui
-	url = git://github.com/yui/yui3.git
-[submodule "static/lib/mui/scroll-pagination"]
-	path = static/lib/mui/scroll-pagination
-	url = git://github.com/miiicasa/scroll-pagination.git
-[submodule "static/lib/mui/editable"]
-	path = static/lib/mui/editable
-	url = git://github.com/miiicasa/yui3-editable.git
+	url = git://github.com/davglass/yui3.git
