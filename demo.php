@@ -1,33 +1,38 @@
-<!DOCTYPE html>
+<?php
+require_once("lib/loader.php");
+$modules = array(
+    "welcome",
+    "welcome/_notification",
+    "charming/_masthead",
+    "common/_sidebar",
+);
+$loader_html = loadModule($modules);
+?><!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Loader Strategy</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssreset/reset-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssfonts/fonts-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssgrids/grids-min.css">
-<?php
-require_once("config.php");
-$html = loadModule(array("welcome/_notification", "common/_sidebar", "charming/_masthead"));
-echo $html;
-?>
+<link rel="stylesheet" href="static/lib/yui/build/cssreset/reset-min.css">
+<link rel="stylesheet" href="static/lib/yui/build/cssfonts/fonts-min.css">
+<link rel="stylesheet" href="static/lib/yui/build/cssgrids/grids-min.css">
+<link rel="stylesheet" href="static/index/common/base.css">
+<?php echo $loader_html; ?>
 </head>
 <body>
-
     <div id="hd">
         <div class="content">
-            <!-- #header (start) -->
-            <div id="header" class="mod">
+            <!-- #masthead (start) -->
+            <div id="masthead" class="mod">
                 <div class="hd">
-                    <h2>#header</h2>
+                    <h2>#masthead</h2>
                 </div>
                 <div class="bd">
                     <ul>
                         <li>
                             <h3>自身所需模組</h3>
                             <ul>
-                                <li>_header.css</li>
-                                <li>_header.js</li>
+                                <li>_masthead.css</li>
+                                <li>_masthead.js</li>
                             </ul>
                             <h3>YUI 模組</h3>
                             <ul>
@@ -37,7 +42,7 @@ echo $html;
                     </ul>
                 </div>
             </div>
-            <!-- #header (end) -->
+            <!-- #masthead (end) -->
         </div>
     </div>
     <div id="bd">
@@ -94,6 +99,6 @@ echo $html;
             </div>
         </div>
     </div>
-
+    <textarea style="width:100%;height:200px;font-size:12px;font-family:Monaco;"><?php echo $loader_html; ?></textarea>
 </body>
 </html>
