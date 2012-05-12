@@ -2,7 +2,7 @@
 $config = array();
 $config["groups"] = array(
     "mui" => array(
-        "async"          => TRUE,
+        "async"          => FALSE,
         "combine"        => TRUE,
         "serverComboCSS" => FALSE,
         "root"           => "lib/mui/",
@@ -17,22 +17,41 @@ $config["groups"] = array(
     ),
 );
 $config["modules"] = array(
-    //"platform-core" => array(
-        //"group"    => "mui",
-        //"js"       => "platform/core.js",
-        //"requires" => array("event-base", "platform-sandbox"),
-    //),
-    //"platform-sandbox" => array(
-        //"group"    => "mui",
-        //"js"       => "platform/sandbox.js",
-    //),
-    //"lang-service" => array(
-        //"group"    => "mui",
-        //"js"       => "platform/lang_service.js",
-        //"requires" => array(
-            //"platform-core", "platform-sandbox", "intl"
-        //),
-    //),
+    "shjs" => array(
+        "group"    => "mui",
+        "css"      => "shjs/sh_nedit.css",
+        "js"       => "shjs/sh_php.min.js",
+        "requires" => array("shjs-core"),
+    ),
+    "shjs-core" => array(
+        "group"    => "mui",
+        "js"       => "shjs/sh_main.min.js",
+    ),
+    "syntax-highlighter-theme-css" => array(
+        "group"    => "mui",
+        "css"      => "syntax-highlighter/scripts/shThemeDefault.css",
+    ),
+    "platform-core" => array(
+        "group"    => "mui",
+        "js"       => "platform/core.js",
+        "requires" => array("node-base", "event-base", "platform-sandbox"),
+    ),
+    "platform-sandbox" => array(
+        "group"    => "mui",
+        "js"       => "platform/sandbox.js",
+    ),
+    "lang-service" => array(
+        "group"    => "mui",
+        "js"       => "platform/lang_service.js",
+        "requires" => array(
+            "platform-core", "platform-sandbox", "intl"
+        ),
+    ),
+    "mui-cssbutton" => array(
+        "group"    => "mui",
+        "css"      => "cssbutton/assets/skins/miiicasa/cssbutton-skin.css",
+        "requires" => array("cssbutton"),
+    ),
     "scroll-pagination" => array(
         "group"    => "mui",
         "js"       => "scroll-pagination/scroll-pagination.js",
@@ -59,13 +78,13 @@ $config["modules"] = array(
         "group"    => "index",
         "js"       => "welcome/_notification.js",
         "css"      => "welcome/_notification.css",
-        "requires" => array("scroll-pagination", "io"),
+        "requires" => array("substitute", "scroll-pagination", "yql", "panel", "node-event-delegate", "handlebars"),
     ),
     "charming/_masthead" => array(
         "group"    => "index",
         "js"       => "charming/_masthead.js",
         "css"      => "charming/_masthead.css",
-        "requires" => array("panel"),
+        "requires" => array("panel", "shjs"),
     ),
     "common/_mastfoot" => array(
         "group"    => "index",
@@ -74,6 +93,7 @@ $config["modules"] = array(
     "common/_sidebar" => array(
         "group"    => "index",
         "css"      => "common/_sidebar.css",
+        "requires" => array("mui-cssbutton"),
     ),
 );
 

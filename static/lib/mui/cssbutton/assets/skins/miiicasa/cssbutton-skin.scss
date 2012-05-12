@@ -1,0 +1,162 @@
+@import "compass";
+.yui3-skin-miiicasa {
+    .yui3-button {
+        background: #4dc7d7;
+        border: 1px solid #3d9dac;
+        color: #fff;
+        font-size: 108%;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.1);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#26000000', GradientType=0);
+        @include background-image(linear-gradient(#4dc7d7 0%, #47b6c7));
+        @include border-radius(2px);
+        @include box-shadow(none);
+        &:hover {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#10ffffff', endColorstr='#10ffffff', GradientType=0);
+            @include background-image(linear-gradient(#50d1e3 0%, #4bc0d1));
+        }
+        &:active {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#26000000', GradientType=0);
+            @include box-shadow(inset 0px 2px 7px rgba(0,0,0,0.4));
+        }
+        &[disabled] {
+            text-shadow: none;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#26000000', GradientType=0);
+            @include background-image(none);
+            @include box-shadow(none);
+            @include transition(none);
+            &:hover, &:active {
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#26000000', GradientType=0);
+                @include background-image(none);
+                @include box-shadow(none);
+                text-shadow: none;
+            }
+        }
+    }
+    .yui3-button-disabled {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#26000000', GradientType=0);
+        @include background-image(none);
+        @include box-shadow(none);
+        @include transition(none);
+        text-shadow: none;
+        &:hover, &:active {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#26000000', GradientType=0);
+            @include background-image(none);
+            @include box-shadow(none);
+            text-shadow: none;
+        }
+    }
+    .yui3-button-form, .yui3-button-exclusive {
+        font-size:  146.5%;
+    }
+    .yui3-button-exclusive {
+        padding: 7px 24px;
+    }
+    .yui3-button-form {
+        padding: 3px 20px;
+    }
+    .yui3-button-stick {
+        background-color: #fff;
+        border: 1px solid #838383 !important;
+        color: #393939;
+        padding: 3px 20px;
+        font-weight: normal;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#e1e1e1', GradientType=0);
+        @include background-image(linear-gradient(#fefefe 0%, #e1e1e1));
+        text-shadow: 1px 1px 0px rgba(255,255,255,1), 0px 0px 0px rgba(255,255,255,0.1);
+        &:hover {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef', GradientType=0);
+            @include background-image(linear-gradient(#ffffff 0%, #efefef));
+        }
+        &:active {
+            @include box-shadow(inset 0px 1px 3px rgba(0,0,0,0.4));
+        }
+        &[disabled],
+        &[disabled]:hover,
+        &[disabled]:active,
+        &.yui3-button-disabled,
+        &.yui3-button-disabled:hover,
+        &.yui3-button-disabled:active {
+            @include background-image(linear-gradient(#fefefe 0%, #e1e1e1));
+            @include box-shadow(none);
+        }
+    }
+    .yui3-button-task {
+        background-color: #000;
+        border: none;
+        padding: 6px 15px;
+        // FIXME: The following line makes border-radius loses its look.
+        // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636363', endColorstr='#393939', GradientType=0);
+        @include background-image(linear-gradient(#636363 0%, #393939));
+        @include text-shadow(1px 1px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.1));
+        &:hover {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#474747', GradientType=0);
+            @include background-image(linear-gradient(#737373 0%, #474747));
+        }
+        &:active {
+            @include box-shadow(inset 0px 2px 7px rgba(0,0,0,0.4));
+        }
+        &[disabled],
+        &[disabled]:hover,
+        &[disabled]:active,
+        &.yui3-button-disabled,
+        &.yui3-button-disabled:active,
+        &.yui3-button-disabled:hover {
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636363', endColorstr='#393939', GradientType=0);
+            @include box-shadow(0 0 0 1px rgba(0, 0, 0, 0.25) inset, 0 2px 4px rgba(0, 0, 0, 0.3) inset);
+            @include background-image(linear-gradient(#636363 0%, #393939));
+            @include text-shadow(1px 1px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.1));
+        }
+    }
+    .yui3-button-table {
+        background-color: #fff;
+        border: 1px solid #78cdd1;
+        color: #009999;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0px 13px;
+        text-shadow: none;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=0);
+        @include background-image(none);
+        @include border-radius(2px);
+        &:hover {
+            filter: none;
+            background:  #d9f1f1;
+        }
+        &:active {
+            filter: none;
+            @include box-shadow(inset 0px 1px 2px rgba(109,134,134,0.4));
+        }
+        &[disabled],
+        &[disabled]:hover,
+        &[disabled]:active,
+        &.yui3-button-disabled:active,
+        &.yui3-button-disabled:hover {
+            background: #fff !important;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=0);
+            @include box-shadow(none);
+        }
+    }
+    .yui3-button-edit {
+        background: #393939;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 1px 7px;
+        &:hover {
+            background: #646464;
+        }
+        &[disabled],
+        &[disabled]:hover,
+        &[disabled]:active,
+        &.yui3-button-disabled,
+        &.yui3-button-disabled:active,
+        &.yui3-button-disabled:hover {
+            background:#b7b7b7;
+            color: #eee;
+            filter: none;
+            @include box-shadow(none);
+        }
+    }
+}

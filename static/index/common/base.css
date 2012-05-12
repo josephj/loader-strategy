@@ -1,26 +1,56 @@
 html, body {
     background: #eaeaea;
 }
-
-body {
-    padding: 10px 0 0;
-    margin: 0 auto;
-    width: 960px;
+em {
+    color: #a00;
 }
-
+body {
+    font-family: 'PT Sans', 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;;
+    padding: 10px 0 0 10px;
+    margin: 0 auto;
+}
+button, input {
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 9px;
+}
+pre {
+    font-size: 13px;
+    color: #333;
+    padding: 5px;
+    background: #eee;
+    border-radius: 5px;
+}
+h1 {
+    font-family: 'PT Sans', 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;;
+    font-size: 26px;
+    font-weight: bold;
+}
 h2 {
+    font-family: 'PT Sans', 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;;
     font-size: 20px;
     border-bottom: solid 1px #ccc;
-    padding: 5px;
+    padding: 5px 0;
 }
-
+.bd {
+    margin-left: -5px;
+}
+.introduction {
+    margin: 5px 0;
+}
+.introduction p {
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+.introduction pre {
+    background: #ffc;
+}
 .content {
     margin: 0 10px 10px 0;
 }
 
 .mod {
-    font-size: 16px;
-    background: #999;
+    background: #333;
     padding: 20px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;

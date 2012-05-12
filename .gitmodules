@@ -13,3 +13,6 @@
 [submodule "static/lib/yui"]
 	path = static/lib/yui
 	url = git://github.com/davglass/yui3.git
+[submodule "static/lib/mui/syntax-highlighter"]
+	path = static/lib/mui/syntax-highlighter
+	url = git://github.com/alexgorbatchev/SyntaxHighlighter.git
